@@ -1,0 +1,16 @@
+{
+  "name": "crash-sites-api",
+  "version": "1.0.0",
+  "description": "crash sites API - MongoDB interface",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "author": "Julien Regnault",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.8"
+  }
+}
