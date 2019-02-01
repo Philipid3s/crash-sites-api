@@ -5,7 +5,7 @@ const routes = require('./src/routes/apiRoutes');
 
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const DB_URL = process.env.PROD_MONGODB;
 
 // Mongoose connection
@@ -16,6 +16,12 @@ mongoose.connect(DB_URL, {
 // bodyparser setup
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 // Call routes controller
 routes(app);
