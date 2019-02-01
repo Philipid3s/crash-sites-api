@@ -1,6 +1,4 @@
-const mongoose = require('mongoose');
-
-const Crash = require('../Models/crash');
+const Crash = require('../models/crash');
 
 const getCrashes = (req, res) => {
     Crash.find({}, (error, crash) => {
