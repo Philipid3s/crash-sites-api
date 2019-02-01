@@ -8,9 +8,9 @@ const PORT = process.env.PORT || 3000;
 const DB_URL = process.env.PROD_MONGODB;
 
 // Mongoose connection
-mongoose.connect(DB_URL, {
-    useNewUrlParser: true
-});
+// mongoose.connect(DB_URL, {
+//    useNewUrlParser: true
+//});
 
 // bodyparser setup
 app.use(bodyParser.urlencoded({ extended: true}));
