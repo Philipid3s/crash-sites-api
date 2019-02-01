@@ -6,7 +6,7 @@ const routes = require('./src/routes/apiRoutes');
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const DB_URL = process.env.MONGODB_URI;
+const DB_URL = process.env.MONGODB_URI || 'mongodb://crash-sites:lotus-1978@ds123181.mlab.com:23181/heroku_215sspjc';
 
 // Mongoose connection
 mongoose.connect(DB_URL, {
